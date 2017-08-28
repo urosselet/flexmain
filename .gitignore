@@ -1,4 +1,5 @@
 *.DS_Store
+/predictionio/.DS_Store
 
 /kibana
 /predictionio/framework
