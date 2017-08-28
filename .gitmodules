@@ -4,3 +4,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = git@git.ig.he-arc.ch:ulysse.rosselet/flexfront.git
+[submodule "predictionio"]
+	path = predictionio
+	url = git@git.ig.he-arc.ch:ulysse.rosselet/flexprediction.git
