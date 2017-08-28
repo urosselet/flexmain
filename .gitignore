@@ -1,6 +1,7 @@
-*.DS_Store
+.DS_Store
 /predictionio/.DS_Store
 
 /kibana
 /predictionio/framework
 /predictionio/PredictionIO-0.11.0-incubating/vendors
+/data
