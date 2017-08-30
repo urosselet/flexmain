@@ -48,6 +48,8 @@ Export The Prediction IO Path (Linux)
 	
 Give Permission To Prediction IO Installation
 
+`PredictionIO-0.11.0-incubating/bin/pio-start-all`
+
 `pio status`
 
 `pio-[start|stop]-all`
@@ -64,14 +66,11 @@ Import data to Prediction Application
 
 ### Links
 
-##### Command Line
-> http://predictionio.incubator.apache.org/cli/#engine-commands
+> [Command Line] (http://predictionio.incubator.apache.org/cli/#engine-commands)
 
-##### Learning DASE
-> http://predictionio.incubator.apache.org/customize/
+> [Learning DASE](http://predictionio.incubator.apache.org/customize/)
 
-##### Datastore
-> http://predictionio.incubator.apache.org/system/anotherdatastore/
+> [Datastore](http://predictionio.incubator.apache.org/system/anotherdatastore/)
 
 ## Elasticsearch
 
@@ -81,37 +80,35 @@ Import data to Prediction Application
 
 #### Links
 
-##### Autocomplete
-> https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_time_search_as_you_type.html
+> [Basic concepts](https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html)
 
-##### Field datatypes
-> https://www.elastic.co/guide/en/elasticsearch/reference/2.4/mapping-types.html
+> [Autocomplete](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_time_search_as_you_type.html)
 
-##### Setup
-> http://predictionio.incubator.apache.org/deploy/
+> [Field datatypes](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/mapping-types.html)
+
+> [Setup](http://predictionio.incubator.apache.org/deploy/)
+
+> [Document queries](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
+
+
+> [Indexing](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
+
+> [Relationships](https://www.elastic.co/guide/en/elasticsearch/guide/current/relations.html)
+
 > https://www.sitepoint.com/search-engine-node-elasticsearch/
-
-##### Document queries
-> https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html
 
 > https://github.com/marsanla/sails-elasticsearch
 
-##### Indexing
-> https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html
 
-##### Relationships
-> https://www.elastic.co/guide/en/elasticsearch/guide/current/relations.html
+#### Import dataset from JSON
 
-##### Import from JSON
-`cd to backend folder`
-
-`node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/liste_plateformes_crowdflower_vf.json localhost:9200 flexcrowd platform -i ignoreMe,myArray[*].ignoreMe --json`
-
-##### Import Categories
-`node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/description_categories.json localhost:9200 flexcrowd categories -i ignoreMe,myArray[*].ignoreMe --json`
+cd to backend folder
 
 ##### Import Plaform
-node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/liste_plateformes_crowdflower_vf.json localhost:9200 flexcrowd platform -i ignoreMe,myArray[*].ignoreMe --json
+`node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json`
+
+##### Import Categories
+`node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json`
 
 ## Misc
 
