@@ -110,6 +110,9 @@ cd to backend folder
 ##### Import Categories
 `node_modules/elastic-import/bin/elastic-import.js ./data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json`
 
+##### VM Commands
+	sudo /etc/init.d/elasticsearch restart
+
 ## Misc
 
 `netstat -vanp tcp | grep 9200`
