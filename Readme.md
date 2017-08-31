@@ -105,10 +105,10 @@ Import data to Prediction Application
 cd to backend folder
 
 ##### Import Plaform
-`node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json`
+`node_modules/elastic-import/bin/elastic-import.js ./data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json`
 
 ##### Import Categories
-`node_modules/elastic-import/bin/elastic-import.js ../predictionio/data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json`
+`node_modules/elastic-import/bin/elastic-import.js ./data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json`
 
 ## Misc
 
@@ -121,3 +121,20 @@ Elasticsearch data visualization
 #### URL : http://localhost:5601
 
 `./bin/kibana`
+
+## Server application launch
+
+###Development environment
+
+#### Front-end
+Url: flexcrowd.org:8081
+
+	pm2 start --name FLXC-FE-DEV npm -- run [dev|prod]	
+#### Backend-end
+Url: flexcrowd.org:8082
+
+	pm2 start process.json --env [development|production] 
+
+#### Elastic-search
+
+###Production environment
