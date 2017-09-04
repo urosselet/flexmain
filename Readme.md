@@ -105,10 +105,10 @@ Import data to Prediction Application
 cd to backend folder
 
 ##### Import Plaform
-`node_modules/elastic-import/bin/elastic-import.js ./data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json`
+	node_modules/elastic-import/bin/elastic-import.js ./data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json
 
 ##### Import Categories
-`node_modules/elastic-import/bin/elastic-import.js ./data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json`
+	node_modules/elastic-import/bin/elastic-import.js ./data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json
 
 ##### VM Commands
 	sudo /etc/init.d/elasticsearch restart
