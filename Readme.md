@@ -80,9 +80,17 @@ Import data to Prediction Application
 
 #### Links
 
+> [Index Module](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html)
+
 > [Basic concepts](https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html)
 
+> [Dynamic Mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/dynamic-mapping.html) 
+
+> [Partial update](https://www.elastic.co/guide/en/elasticsearch/guide/current/partial-updates.html)
+
 > [Autocomplete](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_time_search_as_you_type.html)
+
+> [Multi-field search](https://www.elastic.co/blog/multi-field-search-just-got-better)
 
 > [Field datatypes](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/mapping-types.html)
 
@@ -112,6 +120,14 @@ cd to backend folder
 
 ##### VM Commands
 	sudo /etc/init.d/elasticsearch restart
+	
+#### Elasticsearch dump
+
+	npm install elasticdump
+	
+	cd to backend directory
+	
+	--input=http://localhost:9200/operation --output=./data/flexcrowd_[data|mapping|analyzer].json --type=[data|mapping|analyzer]
 
 ## Misc
 
