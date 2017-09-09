@@ -36,7 +36,7 @@ Latest version as of 29.08.2017
 	
 > Installing dependencies packages in `PredictionIO-0.11.0-incubating/vendors`
 
-After building a distribution, never rebuild with diffirent version in the same directory, you'll need to start with a fresh version of PredictionIO framework
+After building a distribution, never rebuild with different version in the same directory, you'll need to start with a fresh copy of PredictionIO framework
 	
 	wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.3-bin-hadoop2.6.tgz
 	
@@ -56,7 +56,7 @@ Give Permission To Prediction IO Installation
 
 Download or clone an engine template
 
-Create an application for engine template
+Create an application for the engine template
 
 Import data to Prediction Application
 
@@ -112,6 +112,8 @@ Import data to Prediction Application
 
 cd to backend folder
 
+> Can also be done via the admin Front-end
+
 ##### Import Plaform
 	node_modules/elastic-import/bin/elastic-import.js ./data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json
 
@@ -122,6 +124,8 @@ cd to backend folder
 	sudo /etc/init.d/elasticsearch restart
 	
 #### Elasticsearch dump
+
+> Can also be done via the admin Front-end
 
 	npm install elasticdump
 	
@@ -137,6 +141,8 @@ cd to backend folder
 
 Elasticsearch data visualization
 
+Need to be installed manually from 
+
 #### URL : http://localhost:5601
 
 `./bin/kibana`
@@ -146,14 +152,15 @@ Elasticsearch data visualization
 ###Development environment
 
 #### Front-end
-Url: flexcrowd.org:8081
+> Url: http://flexcrowd.org:8081
 
 	pm2 start --name FLXC-FE-DEV npm -- run [dev|prod]	
 #### Backend-end
-Url: flexcrowd.org:8082
+> Url: http://fflexcrowd.org:8082
 
 	pm2 start process.json --env [development|production] 
 
 #### Elastic-search
+> Url: http://flexcrowd.org:9200
 
 ###Production environment
