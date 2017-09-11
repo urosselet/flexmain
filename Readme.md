@@ -12,6 +12,113 @@
 | Elasticsearch 	| v5.5.2 		|
 | PredictionIO 	| v0.11.0 	|
 
+## Elasticsearch
+
+### Installation
+
+#### URL : http://localhost:9200
+
+#### Links
+
+> [Index Module](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html)
+
+> [Basic concepts](https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html)
+
+> [Dynamic Mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/dynamic-mapping.html) 
+
+> [Partial update](https://www.elastic.co/guide/en/elasticsearch/guide/current/partial-updates.html)
+
+> [Autocomplete](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_time_search_as_you_type.html)
+
+> [Multi-field search](https://www.elastic.co/blog/multi-field-search-just-got-better)
+
+> [Field datatypes](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/mapping-types.html)
+
+> [Setup](http://predictionio.incubator.apache.org/deploy/)
+
+> [Document queries](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
+
+
+> [Indexing](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
+
+> [Relationships](https://www.elastic.co/guide/en/elasticsearch/guide/current/relations.html)
+
+> https://www.sitepoint.com/search-engine-node-elasticsearch/
+
+> https://github.com/marsanla/sails-elasticsearch
+
+> http://chrissimpson.co.uk/elasticsearch-yellow-cluster-status-explained.html
+
+
+#### Import dataset from JSON
+
+cd to backend folder
+
+> Can also be done via the admin Front-end
+
+##### Import Plaform
+	node_modules/elastic-import/bin/elastic-import.js ./data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json
+
+##### Import Categories
+	node_modules/elastic-import/bin/elastic-import.js ./data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json
+
+##### VM Commands
+	sudo /etc/init.d/elasticsearch restart
+	
+#### Elasticsearch dump
+
+> Can also be done via the admin Front-end
+
+	npm install elasticdump
+	
+	cd to backend directory
+	
+	--input=http://localhost:9200/operation --output=./data/flexcrowd_[data|mapping|analyzer].json --type=[data|mapping|analyzer]
+
+
+
+## Kibana
+
+Elasticsearch data visualization
+
+Need to be installed manually from 
+
+#### URL : http://localhost:5601
+
+`./bin/kibana`
+
+
+
+## Server application launch
+
+###Flx-Process module
+The flx-process module is to manage the flow state and branching based on a YML file describing intent and entities
+
+#### Linking the flx-process module to the Back-end application
+
+	cd to flx-process (backend/flx-process)
+`npm link`
+	
+	cd to backend root directory
+`npm link flx-process`
+
+###Development environment
+
+#### Front-end
+> Url: http://flexcrowd.org:8081
+
+	pm2 start --name FLXC-FE-DEV npm -- run [dev|prod]	
+#### Backend-end
+> Url: http://fflexcrowd.org:8082
+
+	pm2 start process.json --env [development|production] 
+
+#### Elastic-search
+> Url: http://flexcrowd.org:9200
+
+###Production environment
+
+
 
 ## PredictionIO
 
@@ -72,95 +179,6 @@ Import data to Prediction Application
 
 > [Datastore](http://predictionio.incubator.apache.org/system/anotherdatastore/)
 
-## Elasticsearch
-
-### Installation
-
-#### URL : http://localhost:9200
-
-#### Links
-
-> [Index Module](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html)
-
-> [Basic concepts](https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html)
-
-> [Dynamic Mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/dynamic-mapping.html) 
-
-> [Partial update](https://www.elastic.co/guide/en/elasticsearch/guide/current/partial-updates.html)
-
-> [Autocomplete](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_time_search_as_you_type.html)
-
-> [Multi-field search](https://www.elastic.co/blog/multi-field-search-just-got-better)
-
-> [Field datatypes](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/mapping-types.html)
-
-> [Setup](http://predictionio.incubator.apache.org/deploy/)
-
-> [Document queries](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
-
-
-> [Indexing](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
-
-> [Relationships](https://www.elastic.co/guide/en/elasticsearch/guide/current/relations.html)
-
-> https://www.sitepoint.com/search-engine-node-elasticsearch/
-
-> https://github.com/marsanla/sails-elasticsearch
-
-
-#### Import dataset from JSON
-
-cd to backend folder
-
-> Can also be done via the admin Front-end
-
-##### Import Plaform
-	node_modules/elastic-import/bin/elastic-import.js ./data/liste_plateformes_crowdflower_vf.json localhost:9200 operation platform -i ignoreMe,myArray[*].ignoreMe --json
-
-##### Import Categories
-	node_modules/elastic-import/bin/elastic-import.js ./data/description_categories.json localhost:9200 operation category -i ignoreMe,myArray[*].ignoreMe --json
-
-##### VM Commands
-	sudo /etc/init.d/elasticsearch restart
-	
-#### Elasticsearch dump
-
-> Can also be done via the admin Front-end
-
-	npm install elasticdump
-	
-	cd to backend directory
-	
-	--input=http://localhost:9200/operation --output=./data/flexcrowd_[data|mapping|analyzer].json --type=[data|mapping|analyzer]
-
 ## Misc
 
 `netstat -vanp tcp | grep 9200`
-
-## Kibana
-
-Elasticsearch data visualization
-
-Need to be installed manually from 
-
-#### URL : http://localhost:5601
-
-`./bin/kibana`
-
-## Server application launch
-
-###Development environment
-
-#### Front-end
-> Url: http://flexcrowd.org:8081
-
-	pm2 start --name FLXC-FE-DEV npm -- run [dev|prod]	
-#### Backend-end
-> Url: http://fflexcrowd.org:8082
-
-	pm2 start process.json --env [development|production] 
-
-#### Elastic-search
-> Url: http://flexcrowd.org:9200
-
-###Production environment
