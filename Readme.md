@@ -109,6 +109,13 @@ The flx-process module is to manage the flow state and branching based on a YML 
 
 	pm2 start --name FLXC-FE-DEV npm -- run [dev|prod]	
 #### Backend-end
+
+> Install bower globally
+	
+	npm install bower -g
+	cd to/backend/assets folder
+	bower install
+
 > Url: http://fflexcrowd.org:8082
 
 	pm2 start process.json --env [development|production] 
