@@ -38,10 +38,11 @@
 
 > [Document queries](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
 
-
 > [Indexing](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html)
 
 > [Relationships](https://www.elastic.co/guide/en/elasticsearch/guide/current/relations.html)
+
+> [Cheatsheet](http://elasticsearch-cheatsheet.jolicode.com)
 
 > https://www.sitepoint.com/search-engine-node-elasticsearch/
 
