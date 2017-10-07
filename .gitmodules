@@ -4,6 +4,3 @@
 [submodule "frontend"]
 	path = frontend
 	url = git@git.ig.he-arc.ch:ulysse.rosselet/flexfront.git
-[submodule "elasticsearch"]
-	path = elasticsearch
-	url = git@git.ig.he-arc.ch:ulysse.rosselet/flexelsearch.git

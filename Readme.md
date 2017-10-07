@@ -75,7 +75,12 @@ cd to backend folder
 	cd to backend directory
 	
 	--input=http://localhost:9200/operation --output=./data/flexcrowd_[data|mapping|analyzer].json --type=[data|mapping|analyzer]
-
+	
+	# Import from local to server
+	elasticdump --input=http://localhost:9200/operation --output=http://flexcrowd.org:8083/operation --type=data
+	
+	# Import from server to local
+	elasticdump --input=http://flexcrowd.org:8083/operation --output=http://localhost:9200/operation --type=data
 
 
 ## Kibana
