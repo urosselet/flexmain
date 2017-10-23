@@ -42,6 +42,8 @@
 
 > [Relationships](https://www.elastic.co/guide/en/elasticsearch/guide/current/relations.html)
 
+> [Bucket Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html)
+
 > [Cheatsheet](http://elasticsearch-cheatsheet.jolicode.com)
 
 > https://www.sitepoint.com/search-engine-node-elasticsearch/
