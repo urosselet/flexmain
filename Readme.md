@@ -76,7 +76,7 @@ cd to backend folder
 	
 	cd to backend directory
 	
-	--input=http://localhost:9200/operation --output=./data/flexcrowd_[data|mapping|analyzer].json --type=[data|mapping|analyzer]
+	--input=http://localhost:9200/operation --output=./data/flexcrowd_[data|mapping|analyzer].json --type=[analyzer | mapping | data]
 	
 	# Import from local to server
 	elasticdump --input=http://localhost:9200/operation --output=http://flexcrowd.org:8083/operation --type=data
