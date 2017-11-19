@@ -1,4 +1,4 @@
-# FlexCrowd Main Repository
+# Flexcrowd Main Repository
 
 ## Installation
 
