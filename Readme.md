@@ -6,9 +6,9 @@
 
 | Item 			| version 	|
 |---------------|------------	|
-| Nodejs 			| v6.10.1 	|
+| Nodejs 			| v6.11.2 	|
 | NPM 				| v3.10.10 	|
-| SailsJS 		| v0.12.13  	|
+| SailsJS 		| v0.12.14  	|
 | Elasticsearch 	| v5.5.2 		|
 | PredictionIO 	| v0.11.0 	|
 
