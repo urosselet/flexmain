@@ -83,6 +83,13 @@ cd to backend folder
 	
 	# Import from server to local
 	elasticdump --input=http://flexcrowd.org:8083/operation --output=http://localhost:9200/operation --type=data
+	
+	# Import from local server to files
+	elasticdump --input=http://localhost:9200/operation --output=./data/10012018.json --type=data
+	
+	# Import from file to local server
+	elasticdump --input=./data/10012018.json --output=http://localhost:9200/operation --type=data
+
 
 
 ## Kibana
