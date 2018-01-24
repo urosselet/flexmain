@@ -12,9 +12,33 @@
 | Elasticsearch 	| v5.5.2 		|
 | PredictionIO 	| v0.11.0 	|
 
-## Elasticsearch
+1. Pull the project main repositpory (flexmain) from GitLab
 
-### Installation
+		git clone --recursive git@git.ig.he-arc.ch:ulysse.rosselet/flexmain.git
+	
+		git checkout feature/[v0.X.0]
+
+2. Elasticsearch installation
+	> JVM need to be installed before launching elasticsearch
+		
+	> Based on your OS, download and install the appropriate distribution from Elasticsearch website
+				
+3. Install node modules for the Front-end and Back-end repository
+	
+	> NodeJS and NPM need to be installed before executing the following command
+	
+	> Sailsjs, Bower and node-gyp need to be installed globally (npm i -g sails)
+	
+	cd to [front-end | backend] then execute
+	
+		npm install
+		
+	cd to back-end/assets then execute the following command
+	
+		bower install
+		
+
+## Elasticsearch
 
 #### URL : http://localhost:9200
 
@@ -91,19 +115,6 @@ cd to backend folder
 	elasticdump --input=./data/10012018.json --output=http://localhost:9200/operation --type=data
 
 
-
-## Kibana
-
-Elasticsearch data visualization
-
-Need to be installed manually from 
-
-#### URL : http://localhost:5601
-
-`./bin/kibana`
-
-
-
 ## Server application launch
 
 ###Flx-Process module
@@ -139,8 +150,6 @@ The flx-process module is to manage the flow state and branching based on a YML 
 > Url: http://flexcrowd.org:9200
 
 ###Production environment
-
-
 
 ## PredictionIO
 
