@@ -117,19 +117,6 @@ cd to backend folder
 
 ## Server application launch
 
-###Flx-Process module
-The flx-process module is to manage the flow state and branching based on a YML file describing intent and entities
-
-#### Linking the flx-process module to the Back-end application
-
-	cd to flx-process (backend/flx-process)
-`npm link`
-	
-	cd to backend root directory
-`npm link flx-process`
-
-###Development environment
-
 #### Front-end
 > Url: http://flexcrowd.org:8081
 
@@ -148,67 +135,6 @@ The flx-process module is to manage the flow state and branching based on a YML 
 
 #### Elastic-search
 > Url: http://flexcrowd.org:9200
-
-###Production environment
-
-## PredictionIO
-
-#### URL : http://localhost:7070
-
-### Installation
-
-> Download PredictionIO from [Apache mirror](https://www.apache.org/dyn/closer.cgi/incubator/predictionio/0.11.0-incubating/apache-predictionio-0.11.0-incubating.tar.gz)
-
-> Set the desired version for Scala, Spark and Elasticsearch to build the binary distribution
-
-Latest version as of 29.08.2017
-
-| Item 		   | Version 	| Used version |
-|---------------|---------	|--------------|
-| Scala 		   | v2.12.3 	| v2.10.6		  |
-| Spark         | v2.2.0 	| v2.1.0       |
-| Elasticseach  | v5.5.2  	| v5.5.2       |
-
-	
-	./make-distribution.sh -Dscala.version=2.10.6 -Dspark.version=2.1.0 -Delasticsearch.version=5.5.2
-	
-> Installing dependencies packages in `PredictionIO-0.11.0-incubating/vendors`
-
-After building a distribution, never rebuild with different version in the same directory, you'll need to start with a fresh copy of PredictionIO framework
-	
-	wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.3-bin-hadoop2.6.tgz
-	
-	wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.6.tar.gz	
-
-Export The Prediction IO Path (Linux)
-
-	PATH=$PATH:/Applications/AMPPS/www/flexcrowd/predictionio/PredictionIO-0.11.0-incubating/bin; export PATH
-	
-Give Permission To Prediction IO Installation
-
-`PredictionIO-0.11.0-incubating/bin/pio-start-all`
-
-`pio status`
-
-`pio-[start|stop]-all`
-
-Download or clone an engine template
-
-Create an application for the engine template
-
-Import data to Prediction Application
-
-	pio import —-appid [appID] —-input ../data/pio_data-sample.json
-	pio import --appid 2 --input my_events.json
-
-
-### Links
-
-> [Command Line] (http://predictionio.incubator.apache.org/cli/#engine-commands)
-
-> [Learning DASE](http://predictionio.incubator.apache.org/customize/)
-
-> [Datastore](http://predictionio.incubator.apache.org/system/anotherdatastore/)
 
 ## Misc
 
