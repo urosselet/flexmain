@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = git@git.ig.he-arc.ch:ulysse.rosselet/flexback.git
+	url = git@github.com:urosselet/flexback.git
 [submodule "frontend"]
 	path = frontend
-	url = git@git.ig.he-arc.ch:ulysse.rosselet/flexfront.git
+	url = git@github.com:urosselet/flexfront.git
